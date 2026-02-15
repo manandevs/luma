@@ -1,7 +1,7 @@
 <template>
   <section class="px-5 md:px-[100px] mt-2.5 lg:mt-0 lg:grid lg:grid-cols-2 lg:gap-10 items-center">
-    <div class="flex flex-col max-w-[530px] gap-4">
-      <h1 class="text-4xl leading-tight font-medium lg:text-5xl lg:leading-[1.1]">
+    <div class="flex flex-col max-w-3xl gap-4">
+      <h1 class="text-4xl leading-tight font-medium md:text-5xl lg:text-7xl lg:leading-[1.1]">
         Luma: Illuminating your digital path to success
       </h1>
 
