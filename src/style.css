@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Golden Antique";
+  src: url("/fonts/golden-antique.otf") format("opentype");
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Golden Antique";
+  letter-spacing: 1px;
+  background: #000;
+  color: #fff;
+}
+.logo {
+  filter: drop-shadow(0 0 2em #008000);
+}
