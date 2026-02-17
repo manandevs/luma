@@ -60,30 +60,6 @@ const formType = ref('say_hi');
 <template>
   <div class="text-black overflow-x-hidden pb-0">
 
-    <!-- CTA Section -->
-    <section class="mt-[100px] px-5 md:px-[100px]">
-      <div
-        class="bg-[#008000] rounded-[45px] p-[50px] lg:p-[60px] relative overflow-hidden shadow-[0_5px_0_#191A23] border border-black">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-[100px] items-center relative z-10">
-          <div class="flex flex-col items-start">
-            <h3 class="text-[26px] lg:text-[30px] font-bold mb-[20px] text-white">Let’s make things happen</h3>
-            <p class="text-base lg:text-lg mb-[26px] max-w-[500px] text-white/90">
-              {{ ctaContent.description }}
-            </p>
-            <button
-              class="w-full lg:w-fit px-[35px] py-5 bg-[#191A23] text-white rounded-[14px] text-xl hover:bg-white hover:text-black transition-all duration-300 border border-transparent hover:border-black">
-              {{ ctaContent.buttonText }}
-            </button>
-          </div>
-          <!-- Image -->
-          <div class="hidden lg:flex justify-center">
-            <img src="https://placehold.co/359x394/191A23/FFFFFF?text=Grow+With+Luma" alt="CTA Illustration"
-              class="w-[300px] lg:w-[359px] h-auto object-contain rotate-3 hover:rotate-0 transition-transform duration-500">
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Case Studies Section -->
     <section id="cases" class="mt-[140px] px-5 md:px-[100px]">
       <div
