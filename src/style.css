@@ -24,3 +24,7 @@ body {
 .logo {
   filter: drop-shadow(0 0 2em #008000);
 }
+
+.font-golden-antique {
+    font-family: "Golden Antique";
+}

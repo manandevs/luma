@@ -204,8 +204,9 @@ const formType = ref('say_hi');
         </form>
 
         <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 -right-[150px]">
-          <img src="https://placehold.co/500x500/008000/FFFFFF?text=Luma" alt="Contact Illustration"
-            class="opacity-100 rotate-12 rounded-full border-4 border-black">
+          <div class="opacity-100 rotate-12 rounded-full border-4 bg-[#008000] border-black font-golden-antique text-[#FFFFFF] text-[300px] w-[700px] h-[700px] flex items-center justify-center">
+            Luma
+          </div>
         </div>
       </div>
     </section>
