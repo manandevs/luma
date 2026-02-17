@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-// --- Data: CTA Section ---
-const ctaContent = {
-  title: "Let’s make things happen",
-  description: "Contact us today to learn more about how Luma's digital marketing services can help your business grow and succeed online.",
-  buttonText: "Get your free proposal"
-};
-
 // --- Data: Case Studies ---
 const caseStudies = [
   {
@@ -140,7 +133,7 @@ const formType = ref('say_hi');
           </div>
         </div>
       </div>
-    </section>on>
+    </section>
 
     <!-- Contact Us Section -->
     <section class="mt-[140px] px-5 md:px-[100px] mb-[140px]">
