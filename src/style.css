@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Golden Antique";
-  src: url("/fonts/golden-antique.otf") format("opentype");
+@theme {
+  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --color-neon: #2bff88;
+  --color-aqua: #00d4ff;
+  --color-violet: #7b3bff;
+  --color-magenta: #ff2fd6;
+  --color-ink: #070709;
+  --color-line: #2a2a30;
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -15,16 +20,124 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  font-family: "Golden Antique";
-  letter-spacing: 1px;
-  background: #000;
-  color: #fff;
-}
-.logo {
-  filter: drop-shadow(0 0 2em #008000);
+html {
+  scroll-behavior: smooth;
 }
 
-.font-golden-antique {
-    font-family: "Golden Antique";
+body {
+  font-family: var(--font-sans);
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+@layer components {
+
+/* Wide uppercase display headings */
+.h-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+/* Hollow text */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px currentColor;
+}
+.text-outline-white {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+.text-outline-black {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000;
+}
+
+.bg-luma {
+  background: linear-gradient(90deg, #2bff88 0%, #00d4ff 30%, #7b3bff 65%, #ff2fd6 100%);
+}
+.bg-luma-v {
+  background: linear-gradient(180deg, #2bff88 0%, #00d4ff 35%, #7b3bff 70%, #ff2fd6 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #2bff88, #00d4ff 35%, #7b3bff 70%, #ff2fd6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradient letters sliced by thin black scan-lines (hero heading) */
+.text-stripes {
+  background:
+    repeating-linear-gradient(180deg, transparent 0 5px, #000 5px 7px),
+    linear-gradient(90deg, #ff2fd6, #7b3bff 45%, #00d4ff 80%, #2bff88);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+} /* end @layer components */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee 30s linear infinite reverse;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-marquee-reverse { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Swiper sliders (testimonials, case studies) */
+.luma-swiper .swiper-slide {
+  height: auto;
+}
+.luma-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.luma-dots .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+  margin: 0 !important;
+  transition: width 0.3s, background 0.3s;
+}
+.luma-dots .swiper-pagination-bullet-active {
+  width: 32px;
+  background: linear-gradient(90deg, #2bff88, #00d4ff 35%, #7b3bff 70%, #ff2fd6);
+}
+.luma-dots.on-light .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.35);
+}
+.luma-dots.on-light .swiper-pagination-bullet-active {
+  background: #000;
+}
+.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
 }
